@@ -9,7 +9,7 @@ fetch("http://localhost:3000/missions") // On récupere les donnéees de mission
         missions.appendChild(li);
     });
 
-    // Formulaire dynamique
+    // Selecteur du formulaire 
     const selector = document.getElementById("selMissions");
     data.forEach(mission => {
         
@@ -25,6 +25,7 @@ fetch("http://localhost:3000/missions") // On récupere les donnéees de mission
         
     });
 
+    // Envoi des données du formulaire dans le fichier JSON
     document.getElementById("formMission").addEventListener("submit", function(event) {
         event.preventDefault();
 
@@ -33,7 +34,7 @@ fetch("http://localhost:3000/missions") // On récupere les donnéees de mission
             alert("Veuillez sélectionner une mission.");
             return;
         }
-        
+
         const nom = document.getElementById("nom").value;
         const prenom = document.getElementById("prenom").value;
         const email = document.getElementById("email").value;
@@ -54,10 +55,24 @@ fetch("http://localhost:3000/missions") // On récupere les donnéees de mission
             },
             body: JSON.stringify(application)
         })
-        .then(response => response.json())
+            .then(response => response.json())
         
     });
-
   });
 
 
+//affichage des candidatures
+fetch("http://localhost:3000/candidatures")
+    .then(response => response.json())
+    .then(data => {
+
+        const candidatures = document.getElementById("candidatures");
+        data.forEach(cand => {
+            let div = document.createElement("div");   
+            div.classList.add("cand");
+            div.innerHTML = `<ul><li>id : ${cand.id}</li><li>id mission : ${cand.missionId}</li><li>Nom : ${cand.nom}</li><li>Prénom : ${cand.prenom}</li><li>Email : ${cand.email}</li></ul>`;
+
+            
+            candidatures.appendChild(div);
+        });
+    });
