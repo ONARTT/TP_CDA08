@@ -13,30 +13,5 @@
       "duree": "2 mois"
     }
   ],
-  "candidatures": [
-    {
-      "id": "0661",
-      "missionId": "2",
-      "nom": "erty",
-      "prenom": "ert",
-      "email": "ert",
-      "motiv": "ert"
-    },
-    {
-      "id": "2ddc",
-      "missionId": "2",
-      "nom": "qzd",
-      "prenom": "qzd",
-      "email": "qzd",
-      "motiv": "qzd"
-    },
-    {
-      "id": "16c5",
-      "missionId": "1",
-      "nom": "qzd",
-      "prenom": "qzd",
-      "email": "qzd",
-      "motiv": "qdz"
-    }
-  ]
+  "candidatures": []
 }

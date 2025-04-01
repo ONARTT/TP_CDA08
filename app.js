@@ -55,7 +55,13 @@ fetch("http://localhost:3000/missions") // On récupere les donnéees de mission
             },
             body: JSON.stringify(application)
         })
-            .then(response => response.json())
+            .then(response => {
+                response.json()
+                if(response.ok) {
+                    location.reload();
+                }
+            })
+                
         
     });
   });
@@ -71,8 +77,36 @@ fetch("http://localhost:3000/candidatures")
             let div = document.createElement("div");   
             div.classList.add("cand");
             div.innerHTML = `<ul><li>id : ${cand.id}</li><li>id mission : ${cand.missionId}</li><li>Nom : ${cand.nom}</li><li>Prénom : ${cand.prenom}</li><li>Email : ${cand.email}</li></ul>`;
-
+            
+            let delButton = document.createElement("button");
+            delButton.classList.add(`del`);
+            delButton.setAttribute("id", `${cand.id}`);
+            delButton.innerText= "Supprimer";
+            div.appendChild(delButton);
             
             candidatures.appendChild(div);
+        });
+
+        
+        
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.addEventListener("click", function(event) {
+            if(event.target.classList.contains("del")){
+                const clickedButtonId = event.target.id;
+                fetch(`http://localhost:3000/candidatures/${clickedButtonId}`, {
+                    method: "DELETE",
+                })
+                    .then(response => {
+                        response.json()
+                        if(response.ok) {
+                            location.reload();
+                        }
+                    })
+                    
+            }
         });
     });
