@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(9, 148, 241);
+    padding: 0.2rem;
+    color: white;
+    font-family: AristaB;
+    font-size: 2rem;
+}
+
+@font-face {
+    font-family: Arista;
+    src: url(fonts/Arista-Pro-Light-trial.ttf);
+}
+@font-face {
+    font-family: AristaB;
+    src: url(fonts/Arista-Pro-Fat-trial.ttf);
+}
+@font-face {
+    font-family: Creato;
+    src: url(fonts/CreatoDisplay-Regular.otf);
+
+}
+
+section {
+    font-family: Creato;
+}
+
+.main {
+    margin-left: 1%;
+}
