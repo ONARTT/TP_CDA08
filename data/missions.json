@@ -13,5 +13,22 @@
       "duree": "2 mois"
     }
   ],
-  "candidatures": []
+  "candidatures": [
+    {
+      "id": "b796",
+      "missionId": "1",
+      "nom": "Nart",
+      "prenom": "Olivier",
+      "email": "olivier@test.com",
+      "motiv": "Je souhaite réaliser cette mission."
+    },
+    {
+      "id": "f70d",
+      "missionId": "2",
+      "nom": "Test",
+      "prenom": "test",
+      "email": "test@test.test",
+      "motiv": "testtesttest"
+    }
+  ]
 }

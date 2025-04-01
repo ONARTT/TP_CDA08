@@ -1,14 +1,20 @@
 body {
+    background-color: #f4f4f9;
+    font-family: Creato, sans-serif;
     margin: 0;
+    padding: 0;
+    color: #333;
 }
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: rgb(9, 148, 241);
-    padding: 0.2rem;
+    padding: 0.5rem;
     color: white;
-    font-family: AristaB;
+    font-family: AristaB, sans-serif;
     font-size: 2rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 @font-face {
@@ -25,28 +31,114 @@ nav {
 
 }
 
-section {
-    font-family: Creato;
+.main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
 }
 
-.main {
-    margin-left: 1%;
+
+section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    font-family: Creato, sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-family: Creato, sans-serif;
+    color: rgb(9, 148, 241);
+    margin-bottom: 0.5rem;
+}
+
+
+#listeMissions {
+    list-style: none;
+    padding: 0;
+}
+
+#listeMissions li {
+    background: #eef6ff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+
+.formulaire {
+    background: #f9f9f9;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 #formMission {
-    margin-top: 1%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 0.7rem;
 }
+
+#formMission label {
+    font-weight: bold;
+    font-family: Creato, sans-serif;
+}
+
+#formMission input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    font-family: Creato, sans-serif;
+}
+
+#formMission button {
+    padding: 10px;
+    background-color: rgb(9, 148, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: AristaB, sans-serif;
+}
+
+#formMission button:hover {
+    background-color: rgb(7, 116, 189);
+}
+
 
 .cand {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-
+    background: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: Creato, sans-serif;
 }
 
 .cand ul {
-    margin-right: 1%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.cand button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Creato, sans-serif;
+}
+
+.cand button:hover {
+    background: darkred;
 }
