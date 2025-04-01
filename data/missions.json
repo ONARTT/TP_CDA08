@@ -1,7 +1,17 @@
 {
-    "missions": [
-      { "id": 1, "titre": "Développement d'un site e-commerce", "budget": 5000, "duree": "3 mois" },
-      { "id": 2, "titre": "Création d'une API REST", "budget": 3000, "duree": "2 mois" }
-    ],
-    "candidatures": []
-  }
+  "missions": [
+    {
+      "id": "1",
+      "titre": "Développement d'un site e-commerce",
+      "budget": 5000,
+      "duree": "3 mois"
+    },
+    {
+      "id": "2",
+      "titre": "Création d'une API REST",
+      "budget": 3000,
+      "duree": "2 mois"
+    }
+  ],
+  "candidatures": []
+}
